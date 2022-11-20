@@ -1,1 +1,31 @@
-function fact 0
+function fact 2
+push constant 1
+pop local 0
+push argument 0
+pop local 1
+push local 1
+push constant 2
+lt
+if-goto end
+
+push argument 0
+pop local 0
+
+label loop
+    push local 1
+    push constant 1
+    eq
+    if-goto end
+    push local 1
+    push constant 1
+    sub
+    pop local 1
+    push local 0
+    push local 1
+    call mult 2
+    pop local 0
+    goto loop
+
+label end
+push local 0
+return
