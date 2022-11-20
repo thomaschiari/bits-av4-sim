@@ -1,0 +1,4 @@
+function Main.main 0
+    push temp 0
+    call fact 1
+    pop temp 0
